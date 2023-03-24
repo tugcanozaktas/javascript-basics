@@ -1,62 +1,83 @@
 function negate(a) {
-  // your code here
-};
+  return !a;
+}
 
 function both(a, b) {
-  // your code here
-};
+  return a && b;
+}
 
 function either(a, b) {
-  // your code here
-};
+  return a || b;
+}
 
 function none(a, b) {
-  // your code here
-};
+  return !a && !b;
+}
 
 function one(a, b) {
-  // your code here
-};
+  if (a === b) {
+    return false;
+  }
+  return true;
+}
 
 function truthiness(a) {
-  // your code here
-};
+  return Boolean(a);
+}
 
 function isEqual(a, b) {
-  // your code here
-};
+  return a === b;
+}
 
 function isGreaterThan(a, b) {
-  // your code here
-};
+  return a > b;
+}
 
 function isLessThanOrEqualTo(a, b) {
-  // your code here
-};
+  return a <= b;
+}
 
 function isOdd(a) {
-  // your code here
-};
+  return !(a % 2 === 0);
+}
 
 function isEven(a) {
-  // your code here
-};
+  return a % 2 === 0;
+}
 
 function isSquare(a) {
-  // your code here
-};
+  return Number.isInteger(Math.sqrt(a));
+}
 
 function startsWith(char, string) {
-  // your code here
-};
+  return string[0] === char;
+}
 
 function containsVowels(string) {
-  // your code here
-};
+  const vowels = ['a', 'e', 'i', 'o', 'u'];
+  const vowelsUpper = ['A', 'E', 'I', 'O', 'U'];
+
+  for (let i = 0; i < vowels.length; i += 1) {
+    if (vowels.includes(string[i]) || vowelsUpper.includes(string[i])) {
+      return true;
+    }
+  }
+  return false;
+}
 
 function isLowerCase(string) {
-  // your code here
-};
+  const numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  for (let i = 0; i < string.length; i += 1) {
+    if (numbers.includes(string[i])) {
+      // eslint-disable-next-line no-continue
+      continue;
+    }
+    if (string[i] === string[i].toUpperCase()) {
+      return false;
+    }
+  }
+  return true;
+}
 
 module.exports = {
   negate,
